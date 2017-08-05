@@ -15,6 +15,7 @@ requires = [
     'pyramid_debugtoolbar',
     'waitress',
     'requests',
+    'beautifulsoup4',
 ]
 
 tests_require = [
