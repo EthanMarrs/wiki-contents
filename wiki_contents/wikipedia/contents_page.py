@@ -18,17 +18,24 @@ class ContentsPage:
         """
         Returns the Wikipedia contents page as HTML for a given URL.
         """
-        return
+        self.fetch()
+        return self.scrape()
 
     def fetch(self):
         """
         Fetches the HTML contents of a webpage at the provided URL.
         """
-        return
+
+        request = requests.get(self.url)
+        self.html = request.text
 
     def scrape(self):
         """
         Scrapes the HTML page and returns the table of contents, or raises an
         exception if the table doesn't exist.
         """
-        return
+
+        soup = BeautifulSoup(self.html, 'html.parser')
+        contents = soup.find('div', {'id': 'toc'})
+
+        return str(contents)

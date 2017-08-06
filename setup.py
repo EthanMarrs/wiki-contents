@@ -15,6 +15,7 @@ requires = [
     'pyramid_debugtoolbar',
     'waitress',
     'requests',
+    'responses',
     'beautifulsoup4',
 ]
 
@@ -26,7 +27,7 @@ tests_require = [
 
 setup(
     name='wiki_contents',
-    version='0.0',
+    version='0.1',
     description='wiki-contents',
     long_description=README + '\n\n' + CHANGES,
     classifiers=[
