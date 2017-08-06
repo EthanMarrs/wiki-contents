@@ -10,4 +10,4 @@ class FunctionalTests(unittest.TestCase):
 
     def test_root(self):
         res = self.testapp.get('/', status=200)
-        self.assertTrue(b'Hello World!' in res.body)
+        self.assertTrue(b'Wiki-Contents' in res.body)

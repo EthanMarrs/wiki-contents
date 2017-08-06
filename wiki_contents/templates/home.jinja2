@@ -1,5 +1,17 @@
 {% extends "layout.jinja2" %}
 
 {% block content %}
-<p>Hello World!</p>
+
+<h1>Wiki-Contents</h1>
+<p>Submit a Wikipedia URL to navigate the table of contents.</p>
+
+<form method="POST" action="results">
+  <div>
+    <label>URL</label>
+    <input type="text" name="url"/>
+  </div>
+
+  <input type="submit" value="Submit"/>
+</form>
+
 {% endblock content %}
