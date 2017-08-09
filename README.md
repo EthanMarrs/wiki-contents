@@ -34,6 +34,7 @@ A simple app for viewing Wikipedia contents pages.
 
 ## Additionally
 
-Run the tests (from the root directory):
+To run the tests (from the root directory):
 
-      $ pytest
+            $ pip install -e ".[testing]"
+            $ pytest
