@@ -4,7 +4,7 @@ import requests
 
 class ContentsPage:
     """
-    A simple class that provides functionality for scraping the HTML table of
+    A simple class that provides functionality for fetching the HTML table of
     contents from a Wikipedia page.
     """
 
@@ -31,8 +31,8 @@ class ContentsPage:
 
     def scrape(self):
         """
-        Scrapes the HTML page and returns the table of contents, or raises an
-        exception if the table doesn't exist.
+        Scrapes the HTML page and returns the table of contents from a div with
+        id "toc".
         """
 
         soup = BeautifulSoup(self.html, 'html.parser')
