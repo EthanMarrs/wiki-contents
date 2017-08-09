@@ -11,3 +11,7 @@ class FunctionalTests(unittest.TestCase):
     def test_root(self):
         res = self.testapp.get('/', status=200)
         self.assertTrue(b'Wiki-Contents' in res.body)
+        self.assertTrue(
+            b'Submit a Wikipedia URL to navigate the table of contents.'
+            in res.body
+        )

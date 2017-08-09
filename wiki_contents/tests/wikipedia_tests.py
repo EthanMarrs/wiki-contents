@@ -42,7 +42,7 @@ class WikipediaTests(unittest.TestCase):
         """
         self.contents_page.html = '<html><div id="toc"></div></html>'
         contents = self.contents_page.scrape()
-        self.assertEqual('<div id="toc"></div>', contents)
+        self.assertEqual('<div id="toc"></div>', str(contents))
 
     @responses.activate
     def test_contents(self):
@@ -51,4 +51,4 @@ class WikipediaTests(unittest.TestCase):
         the contents page.
         """
         contents = self.contents_page.contents()
-        self.assertEqual('<div id="toc"></div>', contents)
+        self.assertEqual('<div id="toc"></div>', str(contents))

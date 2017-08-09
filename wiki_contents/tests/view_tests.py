@@ -28,8 +28,22 @@ class ViewTests(unittest.TestCase):
         Assert that project name is assigned.
         """
         request = testing.DummyRequest()
-        view = home_views.home(request)
-        self.assertEqual(view['project'], 'wiki-contents')
+        view = home_views.HomeViews(request)
+        home = view.home()
+        self.assertEqual(home['project'], 'wiki-contents')
+
+    def test_no_content_view(self):
+        """
+        Assert that the "no content" message is displayed.
+        """
+        request = testing.DummyRequest()
+        view = wikipedia_views.WikipediaViews(request)
+        no_content = view.no_content()
+
+        self.assertEqual(
+            no_content['message'],
+            'The requested Wikipedia page did not have a table of contents.'
+        )
 
     @responses.activate
     def test_results_view(self):
@@ -41,4 +55,4 @@ class ViewTests(unittest.TestCase):
         results = view.results()
 
         # Assert that only the required HTML is returned
-        self.assertEqual(results['html'], '<div id="toc"></div>')
+        self.assertEqual(str(results['html']), '<div id="toc"></div>')

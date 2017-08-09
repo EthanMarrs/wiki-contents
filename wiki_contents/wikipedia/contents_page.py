@@ -38,4 +38,4 @@ class ContentsPage:
         soup = BeautifulSoup(self.html, 'html.parser')
         contents = soup.find('div', {'id': 'toc'})
 
-        return str(contents)
+        return contents

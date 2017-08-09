@@ -1,0 +1,10 @@
+{% extends "layout.jinja2" %}
+
+{% block content %}
+
+<a href="{{ request.route_url('home')}}">Reset</a>
+
+<p>{{ message }}</p>
+<p>Please try again.</p>
+
+{% endblock content %}
