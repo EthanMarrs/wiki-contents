@@ -1,5 +1,4 @@
 # Wiki-Contents
-===============
 
 A simple app for viewing Wikipedia contents pages.
 
@@ -7,36 +6,34 @@ A simple app for viewing Wikipedia contents pages.
 
 1. Download the application from `https://github.com/EthanMarrs/wiki-contents/archive/master.zip`
 
-2. Unzip the archive
+2. Unzip the archive:
 
-`unzip wiki-contents-master.zip`
+      $ unzip wiki-contents-master.zip
 
-3. Create a Python3 virtual environment
+3. Create a Python3 virtual environment (optional):
 
-`python3 -m venv env`
+      $ python3 -m venv env
 
-4. Activate the environment
+4. Activate the environment (optional):
 
-`source env/bin/activate`
+      $ source env/bin/activate
 
-5. Navigate into the `wiki-contents-master` directory
+5. Navigate into the `wiki-contents-master` directory:
 
-`cd wiki-contents-master`
+      $ cd wiki-contents-master
 
-6. Install the required packages for the application
+6. Install the required packages for the application:
 
-`pip install -e .`
+      $ pip install -e .
 
-7. Run the application
+7. Run the application:
 
-`pserve production.ini`
+      $ pserve production.ini
 
 8. Navigate to `http://localhost:6543/` in your browser
 
-    cd wiki_contents
-
 ## Additionally
 
-Run the tests (from the root directory)
+Run the tests (from the root directory):
 
-`pytest`
+      $ pytest
